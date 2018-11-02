@@ -17,16 +17,6 @@ services:
       context: ./IdentityServer
       dockerfile: Dockerfile
 
-  testclient:
-    image: testclient
-    ports:
-      - 32773:80
-    build: 
-      context: ./Client
-      dockerfile: Dockerfile
-    volumes:
-      - ./Client:/usr/share/nginx/html
-
   webapplication:
     image: webapplication
     build:
